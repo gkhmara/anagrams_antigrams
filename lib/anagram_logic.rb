@@ -11,31 +11,18 @@ class Anagrams_Antigrams
 
   def read_anagram(input1, input2)
     if input1.scan(/[aeiouAEIOU]/).count >= 1 && input2.scan(/[aeiouAEIOU]/).count >= 1
-      if input1.downcase.split('').sort.join === input2.downcase.split('').sort.join
-        return "These words are anagrams."
+      if input1.scan(/[#{input2}]/).count > 1
+        if input1.downcase.split('').sort.join === input2.downcase.split('').sort.join
+          return "These words are anagrams."
+        else
+          return "These words are not anagrams."
+        end
       else
-        return "These words are not anagrams."
+        return "These words have no letter matches and are antigrams."
       end
     else
       return "One of your inputs is not a word. Please try again."
     end
   end
-
-
-  # def read_anagram(input1, input2)
-  #   if input1.downcase.split('').sort.join === input2.downcase.split('').sort.join
-  #     return "These words are anagrams."
-  #   else
-  #     return "These words are not anagrams."
-  #   end
-  # end
-
-  # def vowel_checker(input1, input2)
-  #   if input1.scan(/[aeiouAEIOU]/).count >= 1 && input2.scan(/[aeiouAEIOU]/).count >= 1
-  #     puts "vowel"
-  #   else
-  #     puts "no vowel"
-  #   end
-  # end
 
 end

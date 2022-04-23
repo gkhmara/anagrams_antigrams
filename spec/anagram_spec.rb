@@ -19,5 +19,10 @@ describe Anagrams_Antigrams do
       expect(user_input.read_anagram("thd", "plmn")).to(eq("One of your inputs is not a word. Please try again."))
     end
 
+    it("should return an error if both inputs have no matching letters") do
+      user_input = Anagrams_Antigrams.new
+      expect(user_input.read_anagram("greg", "hat")).to(eq("These words have no letter matches and are antigrams."))
+    end
+
   end
 end
