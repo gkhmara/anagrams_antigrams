@@ -14,11 +14,10 @@ class Anagrams_Antigrams
   # end
 
   def read_anagram(input1, input2)
-    if input1.split('').sort.join === input2.split('').sort.join
-      # puts "These words are anagrams."
+    if input1.downcase.split('').sort.join === input2.downcase.split('').sort.join
       return "These words are anagrams."
-    elsif
-      puts "These words are not anagrams"
+    else
+      return "These words are not anagrams."
     end
   end
 
