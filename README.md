@@ -17,7 +17,7 @@ This script takes in user input and checks to see if the input is an anagram or 
 ## Setup/Installation Requirements
 
 * Clone the repo from Github
-* Navagate to root project folder *ANAGRAMS_ANTIGRAMS* within the terminal or console
+* Navagate to root project folder *anagrams_antigrams* within the terminal or console
 * type *bundle* into the terminal
 * Run the script file in the terminal with the command: *ruby anagram_script.rb*
 * Enter in two inputs and see the results
