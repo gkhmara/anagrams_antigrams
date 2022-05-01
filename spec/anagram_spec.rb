@@ -34,7 +34,7 @@ describe Anagrams_Antigrams do
   describe '#is_antigram?' do
     it("should take in two inputs and check to see if they are antigrams") do
       user_input = Anagrams_Antigrams.new("cat", "dog")
-      expect(user_input.is_antigram?).to(eq(true))
+      expect(user_input.is_antigram?).to(eq(false))
     end
 
   end
